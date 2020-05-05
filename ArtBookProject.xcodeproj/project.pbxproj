@@ -14,6 +14,7 @@
 		F41F12BB2460DCB500D335A4 /* ArtBookProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F41F12B92460DCB500D335A4 /* ArtBookProject.xcdatamodeld */; };
 		F41F12BD2460DCB800D335A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F41F12BC2460DCB800D335A4 /* Assets.xcassets */; };
 		F41F12C02460DCB800D335A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F41F12BE2460DCB800D335A4 /* LaunchScreen.storyboard */; };
+		F41F12C82460E09000D335A4 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41F12C72460E09000D335A4 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		F41F12BC2460DCB800D335A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F41F12BF2460DCB800D335A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F41F12C12460DCB800D335A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F41F12C72460E09000D335A4 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				F41F12BE2460DCB800D335A4 /* LaunchScreen.storyboard */,
 				F41F12C12460DCB800D335A4 /* Info.plist */,
 				F41F12B92460DCB500D335A4 /* ArtBookProject.xcdatamodeld */,
+				F41F12C72460E09000D335A4 /* DetailsViewController.swift */,
 			);
 			path = ArtBookProject;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 				F41F12B52460DCB500D335A4 /* ViewController.swift in Sources */,
 				F41F12B12460DCB500D335A4 /* AppDelegate.swift in Sources */,
 				F41F12B32460DCB500D335A4 /* SceneDelegate.swift in Sources */,
+				F41F12C82460E09000D335A4 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
