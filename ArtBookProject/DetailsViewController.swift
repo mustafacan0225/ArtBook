@@ -15,6 +15,8 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var editTextName: UITextField!
     @IBOutlet weak var editTextArtist: UITextField!
     @IBOutlet weak var editTextYear: UITextField!
+    
+    var selectedItem : Paintings?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,6 +26,22 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
         img.isUserInteractionEnabled = true
         let imgRecognizer = UITapGestureRecognizer(target: self, action: #selector(selectImage));
         img.addGestureRecognizer(imgRecognizer)
+        
+        if selectedItem != nil {
+            print("selectedItem")
+            if let image = UIImage(data: (selectedItem?.image!)!) {
+                img.image = image
+            }
+            
+            editTextName.text = selectedItem?.name
+            editTextArtist.text = selectedItem?.artist
+            if let year = selectedItem?.year {
+                editTextYear.text = String(year)
+            }
+            
+        } else {
+            print("nil")
+        }
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -50,7 +68,7 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         newPainting.setValue(editTextName.text!, forKey: "name")
         newPainting.setValue(editTextName.text!, forKey: "artist")
-        
+        newPainting.setValue(UUID(), forKey: "id")
         if let year = Int(editTextYear.text!) {
             newPainting.setValue(year, forKey: "year")
         }
@@ -61,9 +79,14 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
         do {
             try context.save()
             print("success save")
+            goToBeforePage()
         } catch{
             print("error save");
         }
+    }
+    
+    func goToBeforePage() {
+        self.navigationController?.popViewController(animated: true)
     }
     
 }
