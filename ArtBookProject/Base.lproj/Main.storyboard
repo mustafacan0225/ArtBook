@@ -134,7 +134,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tcx-BD-Muy">
                                 <rect key="frame" x="141.5" y="634" width="131" height="36"/>
-                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="131" id="Soy-w6-R6K"/>
                                     <constraint firstAttribute="height" constant="36" id="ctO-WT-Wio"/>
@@ -170,6 +170,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ay7-KA-4YI"/>
                     <connections>
+                        <outlet property="btnSave" destination="Tcx-BD-Muy" id="48U-kr-uGR"/>
                         <outlet property="editTextArtist" destination="onT-U1-M5b" id="dhf-3a-RaL"/>
                         <outlet property="editTextName" destination="sgD-yJ-Dx3" id="OO4-hX-gon"/>
                         <outlet property="editTextYear" destination="Nwx-0W-la4" id="P9j-bE-F5Y"/>

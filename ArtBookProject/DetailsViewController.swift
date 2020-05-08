@@ -16,6 +16,7 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var editTextArtist: UITextField!
     @IBOutlet weak var editTextYear: UITextField!
     
+    @IBOutlet weak var btnSave: UIButton!
     var selectedItem : Paintings?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,11 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
         img.addGestureRecognizer(imgRecognizer)
         
         if selectedItem != nil {
+            
+            btnSave.isEnabled = false
+            btnSave.isHidden = false
+            btnSave.backgroundColor = UIColor.gray
+            
             print("selectedItem")
             if let image = UIImage(data: (selectedItem?.image!)!) {
                 img.image = image
@@ -40,13 +46,19 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
             }
             
         } else {
-            print("nil")
+            btnSave.isEnabled = false
+            btnSave.isHidden = false
+            btnSave.backgroundColor = UIColor.gray
         }
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         img.image = info[.originalImage] as? UIImage
         self.dismiss(animated: true, completion: nil)
+        
+        btnSave.isEnabled = true
+        btnSave.isHidden = false
+        btnSave.backgroundColor = UIColor.blue
     }
     
     @objc func selectImage() {
